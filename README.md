@@ -32,7 +32,7 @@ This helps support development and keep the ESO addon ecosystem fun and alive!
 If you're an addon developer and want to use `LibCustomNames`:
 
 ```lua
-local name = LibCustomNames:GetDisplayName("@originalAccountName") or "@originalAccountName"
+local name = LibCustomNames:Get("@originalAccountName") or "@originalAccountName"
 ```
 Documentation will be expanded as needed — feel free to open an issue if you need help integrating it.
 
@@ -59,7 +59,5 @@ Make sure to keep names appropriate and tasteful. Offensive or misleading conten
 Made with [contrib.rocks](https://contrib.rocks).
 📬 Contact
 For questions, contributions, or donations:
-
-In-game: @m00nyONE (EU server)
 
 GitHub: Issues & PRs
