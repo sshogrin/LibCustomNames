@@ -2,6 +2,15 @@ local lib_name = "LibCustomNames"
 local lib = _G[lib_name]
 local n = lib.GetNamesTable()
 
+-- internal function that created a deep copy of a table
+local function clone(t)
+    local copy = {}
+    for k, v in pairs(t) do
+        copy[k] = v
+    end
+    return copy
+end
+
 --- Checks whether a custom name exists for the given username.
 --- @param username string The player's account name (e.g., "@m00nyONE").
 --- @return boolean hasCustomName `true` if a custom name exists, `false` otherwise.
@@ -33,4 +42,8 @@ function lib.Get(username, colored)
     else
         return entry[2] or entry[1]
     end
+end
+
+function lib.GetAllNames()
+    return clone(n)
 end
