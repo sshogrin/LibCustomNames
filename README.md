@@ -32,7 +32,7 @@ This helps support development and keep the ESO addon ecosystem fun and alive!
 If you're an addon developer and want to use `LibCustomNames`:
 
 ```lua
-local name = LibCustomNames:Get("@originalAccountName") or "@originalAccountName"
+local name = LibCustomNames.Get("@originalAccountName") or "@originalAccountName"
 ```
 Documentation will be expanded as needed — feel free to open an issue if you need help integrating it.
 
