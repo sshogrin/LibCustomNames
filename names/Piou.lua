@@ -16,3 +16,5 @@ n["@zLieBe"] = {"Liebe", "|cc6180bLiebe|r"}
 n["@Karma-Akabane19"] = {"Karma", "|cd22737K|r|cdd4e37a|r|ce97536r|r|cf49c36m|r|cffc336a|r"}
 n["@Odin76"] = {"Odin", "|cffc800Odin|r"}
 n["@Nyo-Rdn"] = {"Nyo", "|c4168f0N|r|c8234e1y|r|cc300d2o|r"}
+n["@Chelgoumy"] = {"Chelgoumy", "|cff2101Che|r|c000000lg|r|cFFFFFFou|r|c58FF0Amy|r"}
+n["@KOZYMEISTER"] = {"Kozy", "|c8f00bfK|r|c5f0080o|r|c300040z|r|c000000y|r"}
