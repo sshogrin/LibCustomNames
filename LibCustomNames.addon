@@ -15,6 +15,7 @@
 # Core Library
 LibCustomNames.lua
 api.lua
+menu.lua
 
 ## names
 names/cfm.lua

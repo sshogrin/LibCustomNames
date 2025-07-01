@@ -1,3 +1,6 @@
+## 2026.07.01
+- add menu
+
 ## 2025.06.24
 - first usable version
 - add api function to be used by other addons
