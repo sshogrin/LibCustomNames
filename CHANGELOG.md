@@ -1,5 +1,5 @@
 ## 2026.07.01
-- add menu
+- add menu for changing custom name together with new instructions on how to get one
 
 ## 2025.06.24
 - first usable version
