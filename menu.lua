@@ -1,6 +1,5 @@
 local lib_name = "LibCustomNames"
 local lib = _G[lib_name]
-local lib_name = lib.name
 local lib_author = lib.author
 local lib_version = lib.version
 
@@ -90,9 +89,9 @@ local function getOptions()
         if #t >= 3 then
             sv.nameRaw = t[2]
             sv.nameFormatted = t[3]
-            LibCustomIconsMenu_raw.label:SetColor(1, 1, 1)
+            LibCustomNamesMenu_raw.label:SetColor(1, 1, 1)
         else
-            LibCustomIconsMenu_raw.label:SetColor(1, 0, 0)
+            LibCustomNamesMenu_raw.label:SetColor(1, 0, 0)
         end
     end
 
@@ -101,7 +100,7 @@ local function getOptions()
         local s = sv.nameFormatted
         --local s = strfmt('|t22:22:%s|t %s', M.sw.myIconPathFull, M.sw.myIconNameFormatted)
         if updateControl then
-            LibCustomIconsMenu_preview.data.text = s
+            LibCustomNamesMenu_preview.data.text = s
         end
         return s
     end
@@ -198,12 +197,12 @@ local function getOptions()
         {
             type = "description",
             text = GeneratePreview(),
-            reference = "LibCustomIconsMenu_preview",
+            reference = "LibCustomNamesMenu_preview",
         },
         {
             type = "editbox",
             name = GetString(LCI_MENU_LUA),
-            reference = "LibCustomIconsMenu_raw",
+            reference = "LibCustomNamesMenu_raw",
             tooltip = GetString(LCI_MENU_LUA_TT),
             default = GenerateCode(),
             getFunc = function() return GenerateCode() end,
@@ -215,7 +214,7 @@ local function getOptions()
 end
 
 function lib.BuildMenu()
-    sv = ZO_SavedVars:NewAccountWide(lib_name, svVersion, nil, svDefaults)
+    sv = ZO_SavedVars:NewAccountWide(lib_name .. "SV", svVersion, nil, svDefaults)
 
     local panel = getPanel()
     local options = getOptions()

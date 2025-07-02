@@ -1,5 +1,5 @@
 local strings = {
-    LCI_MENU = "LibCustomIcons",
+    LCI_MENU = "LibCustomNames",
     LCI_MENU_README = "Readme (Click to open)",
     LCI_MENU_README1 = "Use the settings below to customize your name. It's only a preview, which means nobody will see your changes until you send the generated LUA code to the addon's author.",
     LCI_MENU_README2 = "Click \"%s\" at the top of this menu for more detailed instructions on how to contact the author and get a custom name. Please, only use in-game mails for gold donations. You won't get any replies there!",
