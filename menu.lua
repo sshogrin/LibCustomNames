@@ -121,27 +121,27 @@ local function getOptions()
     local readme = {}
     readme[1] = {
         type = "description",
-        text = strfmt("|c00FF001.|r %s", GetString(LCI_MENU_README1))
+        text = strfmt("|c00FF001.|r %s", GetString(LCN_MENU_README1))
     }
     readme[2] = {
         type = "description",
-        text = strfmt("|c00FF003.|r %s", strfmt(GetString(LCI_MENU_README2), LAM.util.L.WEBSITE))
+        text = strfmt("|c00FF003.|r %s", strfmt(GetString(LCN_MENU_README2), LAM.util.L.WEBSITE))
     }
 
     return {
         {
             type = "submenu",
-            name = strfmt("|cFF8800%s|r", GetString(LCI_MENU_README)),
+            name = strfmt("|cFF8800%s|r", GetString(LCN_MENU_README)),
             controls = readme,
         },
         {
             type = "header",
-            name = strfmt("|cFFFACD%s|r", GetString(LCI_MENU_HEADER))
+            name = strfmt("|cFFFACD%s|r", GetString(LCN_MENU_HEADER))
         },
         {
             type = "editbox",
-            name = GetString(LCI_MENU_NAME_VAL),
-            tooltip = GetString(LCI_MENU_NAME_VAL_TT),
+            name = GetString(LCN_MENU_NAME_VAL),
+            tooltip = GetString(LCN_MENU_NAME_VAL_TT),
             default = sv.nameRaw,
             getFunc = function() return sv.nameRaw end,
             setFunc = function(value)
@@ -153,8 +153,8 @@ local function getOptions()
         },
         {
             type = "checkbox",
-            name = GetString(LCI_MENU_GRADIENT),
-            tooltip = GetString(LCI_MENU_GRADIENT_TT),
+            name = GetString(LCN_MENU_GRADIENT),
+            tooltip = GetString(LCN_MENU_GRADIENT_TT),
             default = false,
             getFunc = function() return sv.enableGradient end,
             setFunc = function(value)
@@ -164,7 +164,7 @@ local function getOptions()
         },
         {
             type = "colorpicker",
-            name = GetString(LCI_MENU_COLOR1),
+            name = GetString(LCN_MENU_COLOR1),
             default = ZO_ColorDef:New(1, 1, 1, 1),
             getFunc = function() return unpack(sv.color1) end,
             setFunc = function(r2, g2, b2)
@@ -178,7 +178,7 @@ local function getOptions()
         },
         {
             type = "colorpicker",
-            name = GetString(LCI_MENU_COLOR2),
+            name = GetString(LCN_MENU_COLOR2),
             default = ZO_ColorDef:New(1, 1, 1, 1),
             getFunc = function() return unpack(sv.color2) end,
             setFunc = function(r2, g2, b2)
@@ -192,7 +192,7 @@ local function getOptions()
         },
         {
             type = "header",
-            name = strfmt("|cFFFACD%s|r", GetString(LCI_MENU_PREVIEW)),
+            name = strfmt("|cFFFACD%s|r", GetString(LCN_MENU_PREVIEW)),
         },
         {
             type = "description",
@@ -201,9 +201,9 @@ local function getOptions()
         },
         {
             type = "editbox",
-            name = GetString(LCI_MENU_LUA),
+            name = GetString(LCN_MENU_LUA),
             reference = "LibCustomNamesMenu_raw",
-            tooltip = GetString(LCI_MENU_LUA_TT),
+            tooltip = GetString(LCN_MENU_LUA_TT),
             default = GenerateCode(),
             getFunc = function() return GenerateCode() end,
             setFunc = function(value) ParseCode(value); GeneratePreview(true) end,
