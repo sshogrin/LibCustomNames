@@ -125,7 +125,7 @@ local function getOptions()
     }
     readme[2] = {
         type = "description",
-        text = strfmt("|c00FF003.|r %s", strfmt(GetString(LCN_MENU_README2), LAM.util.L.WEBSITE))
+        text = strfmt("|c00FF002.|r %s", strfmt(GetString(LCN_MENU_README2), LAM.util.L.WEBSITE))
     }
 
     return {
