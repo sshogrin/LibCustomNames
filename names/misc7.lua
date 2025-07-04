@@ -124,3 +124,4 @@ n["@Noobl3t"] = {"Noobl3t", "|cdb1624N|r|cb62c49o|r|c92426do|r|c6d5792b|r|c496db
 n["@BosmerBathWater"] = {"Tali", "|cff5383T|r|cff709fa|r|cff8cbbl|r|cffa9d7i|r"}
 n["@Asthrae"] = {"Matthis", "|c44aa88Matthis|r"}
 n["@Sbirr0"] = {"Sbirr0", "|c07f681S|r|c0dee91b|r|c14e5a2i|r|c1bdcb3r|r|c21d4c3r|r|c28cbd40|r"}
+n["@Eilistraae"] = {"Eilistraae", "Eilistraae"}
