@@ -1,3 +1,6 @@
+## 2026.07.04
+- bump LibAddonMenu to 40
+
 ## 2026.07.01
 - add menu for changing custom name together with new instructions on how to get one
 - add language support - tell me if you are willing to help to translate
