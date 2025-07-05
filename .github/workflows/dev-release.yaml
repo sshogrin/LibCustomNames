@@ -80,7 +80,7 @@ jobs:
           updateOnlyUnreleased: true
 
       - name: Test Upload to ESOUI
-        uses: m00nyONE/esoui-upload@v1.1.0
+        uses: m00nyONE/esoui-upload@v1.1.1
         with:
           api_key: ${{ secrets.ESOUI_API_KEY }}
           addon_id: '4155'
