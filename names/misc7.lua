@@ -158,3 +158,4 @@ n["@PvPenny"] = {"PvPenny", "|c155b0eP|r|c25771dv|r|c35922bP|r|c44ad3ae|r|c54c84
 n["@UncleFoxx"] = {"UncleFoxx", "|c2313ffU|r|c1e26ffn|r|c1a39ffc|r|c164cffl|r|c115fffe|r|c0d72ffF|r|c0985ffo|r|c0498ffx|r|c00abffx|r"}
 n["@JacobWasTake'n"] = {"Jacob", "|cff8402J|r|cff8e01a|r|cff9901c|r|cffa300o|r|cffae00b|r"}
 n["@kamikiro"] = {"kami", "|c0a0a0akami|r"}
+n["@RashEnderSami"] = {"Sami", "|c45ffbfS|r|c6cff7fa|r|c92ff40m|r|cb9ff00i|r"}
