@@ -200,8 +200,12 @@ local function getOptions()
             reference = "LibCustomNamesMenu_preview",
         },
         {
+            type = "header",
+            name = strfmt("|cFFFACD%s|r", GetString(LCN_MENU_LUA)),
+        },
+        {
             type = "editbox",
-            name = GetString(LCN_MENU_LUA),
+            --name = GetString(LCN_MENU_LUA),
             reference = "LibCustomNamesMenu_raw",
             tooltip = GetString(LCN_MENU_LUA_TT),
             default = GenerateCode(),
