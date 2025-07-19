@@ -80,11 +80,11 @@ local function getOptions()
     end
 
     -- Parse LUA code to extract custom name and icon path.
-    -- Format: u["@UserID"] = {"name", "|cFFFF00name|r", "HodorReflexes/users/misc/name.dds"}
+    -- Format: u["@UserID"] = {"name", "|cFFFF00name|r"}
     local ParseCode = function(value)
         local t = {}
         -- Get all values in double quotes.
-        -- If everything is correct, then there will be four: @UserID, name, colored name, file.
+        -- If everything is correct, then there will be three: @UserID, name, colored name.
         for s in string.gmatch(value, '"([^"]*)"') do t[#t + 1] = s end
         if #t >= 3 then
             sv.nameRaw = t[2]
