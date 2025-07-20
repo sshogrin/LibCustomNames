@@ -339,3 +339,4 @@ n["@Bunnisox"] = {"Bunnisox", "|cffc8e1B|r|cffccd9u|r|cffd0d1n|r|cffd4c9n|r|cffd
 n["@Aerifex"] = {"Aerifex", "|c3118dbA|r|c5430b6e|r|c764892r|r|c98606di|r|cba7849f|r|cdd9024e|r|cffa800x|r"}
 n["@LoTemon"] = {"LoTemon", "|c6af000Lo|r|cfffd00Te|r|cff9600mon|r"}
 n["@spr4yer"] = {"spr4yer", "|cdadd24s|r|cb5bb49p|r|c91996dr|r|c6d78924|r|c4956b6y|r|c2434dbe|r|c0012ffr|r"}
+n["@DIFFx22"] = {"DIFFx22", "|c00b8ffD|r|c00a2ffI|r|c008dffF|r|c0078ffF|r|c0063ffx|r|c004dff2|r|c0038ff2|r"}
