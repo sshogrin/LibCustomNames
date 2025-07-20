@@ -16,6 +16,8 @@ local svDefaults = {
 local LAM = LibAddonMenu2
 local strfmt = string.format
 
+local githubURL = "https://github.com/m00nyONE/LibCustomNames"
+
 local function getPanel()
     return {
         type = 'panel',
@@ -23,7 +25,7 @@ local function getPanel()
         displayName = lib_name,
         author = '|c76c3f4@m00nyONE|r',
         version = strfmt('|c00FF00%s|r', lib_version),
-        website = 'https://www.esoui.com/downloads/info4155-LibCustomNames.html#donate',
+        website = 'https://www.esoui.com/downloads/info4155-LibCustomNames.html',
         donation = lib.Donate,
         registerForRefresh = true,
     }
@@ -75,30 +77,12 @@ local function getOptions()
 
     -- Generate new LUA code based on custom name and selected colors.
     local GenerateCode = function()
-        local s = strfmt('```n["%s"] = {"%s", "%s"}```', GetDisplayName('player'), sv.nameRaw, sv.nameFormatted)
-        return s
-    end
-
-    -- Parse LUA code to extract custom name and icon path.
-    -- Format: u["@UserID"] = {"name", "|cFFFF00name|r"}
-    local ParseCode = function(value)
-        local t = {}
-        -- Get all values in double quotes.
-        -- If everything is correct, then there will be three: @UserID, name, colored name.
-        for s in string.gmatch(value, '"([^"]*)"') do t[#t + 1] = s end
-        if #t >= 3 then
-            sv.nameRaw = t[2]
-            sv.nameFormatted = t[3]
-            LibCustomNamesMenu_raw.label:SetColor(1, 1, 1)
-        else
-            LibCustomNamesMenu_raw.label:SetColor(1, 0, 0)
-        end
+        return strfmt('n["%s"] = {"%s", "%s"}', GetDisplayName('player'), sv.nameRaw, sv.nameFormatted)
     end
 
     -- Create preview string and update control if needed.
     local GeneratePreview = function(updateControl)
-        local s = sv.nameFormatted
-        --local s = strfmt('|t22:22:%s|t %s', M.sw.myIconPathFull, M.sw.myIconNameFormatted)
+        local s = strfmt("                    %s", sv.nameFormatted)
         if updateControl then
             LibCustomNamesMenu_preview.data.text = s
         end
@@ -118,101 +102,99 @@ local function getOptions()
         return sv.nameFormatted
     end
 
-    local readme = {}
-    readme[1] = {
-        type = "description",
-        text = strfmt("|c00FF001.|r %s", GetString(LCN_MENU_README1))
-    }
-    readme[2] = {
-        type = "description",
-        text = strfmt("|c00FF002.|r %s", strfmt(GetString(LCN_MENU_README2), LAM.util.L.WEBSITE))
-    }
-
     return {
         {
             type = "submenu",
-            name = strfmt("|cFF8800%s|r", GetString(LCN_MENU_README)),
-            controls = readme,
-        },
-        {
-            type = "header",
-            name = strfmt("|cFFFACD%s|r", GetString(LCN_MENU_HEADER))
-        },
-        {
-            type = "editbox",
-            name = GetString(LCN_MENU_NAME_VAL),
-            tooltip = GetString(LCN_MENU_NAME_VAL_TT),
-            default = sv.nameRaw,
-            getFunc = function() return sv.nameRaw end,
-            setFunc = function(value)
-                if value ~= sv.nameRaw then
-                    sv.nameRaw = value or ""
-                    GenerateName(true)
-                end
-            end,
-        },
-        {
-            type = "checkbox",
-            name = GetString(LCN_MENU_GRADIENT),
-            tooltip = GetString(LCN_MENU_GRADIENT_TT),
-            default = false,
-            getFunc = function() return sv.enableGradient end,
-            setFunc = function(value)
-                sv.enableGradient = value
-                GenerateName(true)
-            end,
-        },
-        {
-            type = "colorpicker",
-            name = GetString(LCN_MENU_COLOR1),
-            default = ZO_ColorDef:New(1, 1, 1, 1),
-            getFunc = function() return unpack(sv.color1) end,
-            setFunc = function(r2, g2, b2)
-                local r1, g1, b1 = unpack(sv.color1)
-                if r1 ~= r2 or g1 ~= g2 or b1 ~= b2 then
-                    sv.color1 = {r2, g2, b2}
-                    GenerateName(true)
-                end
-            end,
-            width = 'half',
-        },
-        {
-            type = "colorpicker",
-            name = GetString(LCN_MENU_COLOR2),
-            default = ZO_ColorDef:New(1, 1, 1, 1),
-            getFunc = function() return unpack(sv.color2) end,
-            setFunc = function(r2, g2, b2)
-                local r1, g1, b1 = unpack(sv.color2)
-                if r1 ~= r2 or g1 ~= g2 or b1 ~= b2 then
-                    sv.color2 = {r2, g2, b2}
-                    GenerateName(true)
-                end
-            end,
-            width = 'half',
-        },
-        {
-            type = "header",
-            name = strfmt("|cFFFACD%s|r", GetString(LCN_MENU_PREVIEW)),
-        },
-        {
-            type = "description",
-            text = GeneratePreview(),
-            reference = "LibCustomNamesMenu_preview",
-        },
-        {
-            type = "header",
-            name = strfmt("|cFFFACD%s|r", GetString(LCN_MENU_LUA)),
-        },
-        {
-            type = "editbox",
-            --name = GetString(LCN_MENU_LUA),
-            reference = "LibCustomNamesMenu_raw",
-            tooltip = GetString(LCN_MENU_LUA_TT),
-            default = GenerateCode(),
-            getFunc = function() return GenerateCode() end,
-            setFunc = function(value) ParseCode(value); GeneratePreview(true) end,
-            isMultiline = true,
-            isExtraWide = true,
+            name = strfmt("|cFF8800%s|r", "For Developers"),
+            controls = {
+                {
+                    type = "description",
+                    text = "If you know how to code addons, you can just create a PullRequest on Github and add a custom name that way."
+                },
+                {
+                    type = "button",
+                    name = "github",
+                    func = function() RequestOpenUnsafeURL(githubURL) end,
+                    width = 'full',
+                },
+                {
+                    type = "header",
+                    name = strfmt("|cFFFACD%s|r", GetString(LCN_MENU_HEADER))
+                },
+                {
+                    type = "editbox",
+                    name = GetString(LCN_MENU_NAME_VAL),
+                    tooltip = GetString(LCN_MENU_NAME_VAL_TT),
+                    default = sv.nameRaw,
+                    getFunc = function() return sv.nameRaw end,
+                    setFunc = function(value)
+                        if value ~= sv.nameRaw then
+                            sv.nameRaw = value or ""
+                            GenerateName(true)
+                        end
+                    end,
+                },
+                {
+                    type = "checkbox",
+                    name = GetString(LCN_MENU_GRADIENT),
+                    tooltip = GetString(LCN_MENU_GRADIENT_TT),
+                    default = false,
+                    getFunc = function() return sv.enableGradient end,
+                    setFunc = function(value)
+                        sv.enableGradient = value
+                        GenerateName(true)
+                    end,
+                },
+                {
+                    type = "colorpicker",
+                    name = GetString(LCN_MENU_COLOR1),
+                    default = ZO_ColorDef:New(1, 1, 1, 1),
+                    getFunc = function() return unpack(sv.color1) end,
+                    setFunc = function(r2, g2, b2)
+                        local r1, g1, b1 = unpack(sv.color1)
+                        if r1 ~= r2 or g1 ~= g2 or b1 ~= b2 then
+                            sv.color1 = {r2, g2, b2}
+                            GenerateName(true)
+                        end
+                    end,
+                    width = 'full',
+                },
+                {
+                    type = "colorpicker",
+                    name = GetString(LCN_MENU_COLOR2),
+                    default = ZO_ColorDef:New(1, 1, 1, 1),
+                    getFunc = function() return unpack(sv.color2) end,
+                    setFunc = function(r2, g2, b2)
+                        local r1, g1, b1 = unpack(sv.color2)
+                        if r1 ~= r2 or g1 ~= g2 or b1 ~= b2 then
+                            sv.color2 = {r2, g2, b2}
+                            GenerateName(true)
+                        end
+                    end,
+                    width = 'full',
+                },
+                {
+                    type = "description",
+                    text = GetString(LCN_MENU_PREVIEW),
+                    width = 'half',
+                },
+                {
+                    type = "description",
+                    text = GeneratePreview(),
+                    reference = "LibCustomNamesMenu_preview",
+                    width = 'half',
+                },
+                {
+                    type = "editbox",
+                    name = GetString(LCN_MENU_LUA),
+                    tooltip = GetString(LCN_MENU_LUA_TT),
+                    default = GenerateCode(),
+                    getFunc = function() return GenerateCode() end,
+                    setFunc = function(value) GeneratePreview(true) end,
+                    isMultiline = true,
+                    isExtraWide = true,
+                },
+            },
         },
     }
 end

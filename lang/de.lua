@@ -1,8 +1,5 @@
 local strings = {
     LCN_MENU = "LibCustomNames",
-    LCN_MENU_README = "Readme (Klicken zum Öffnen)",
-    LCN_MENU_README1 = "Verwende die untenstehenden Einstellungen, um deinen Namen anzupassen. Dies ist nur eine Vorschau – niemand wird deine Änderungen sehen, bis du den generierten LUA-Code an den Addon-Autor sendest.",
-    LCN_MENU_README2 = "Klicke oben in diesem Menü auf „%s“, um eine detaillierte Anleitung zu erhalten, wie du den Autor kontaktieren und einen benutzerdefinierten Namen erhalten kannst. Bitte verwende das Ingame-Postsystem nur für Goldspenden. Anfragen zu Icons werden dort nicht beantwortet!",
     LCN_MENU_HEADER = "mein benutzerdefinierter Name",
     LCN_MENU_NAME_VAL = "Benutzerdefinierter Name",
     LCN_MENU_NAME_VAL_TT = "Hier kannst du einen benutzerdefinierten Namen festlegen.",
