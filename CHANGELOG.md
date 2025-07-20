@@ -1,3 +1,6 @@
+## 2025.07.20
+- Dolgubon you coulda just asked :D
+
 ## 2026.07.04
 - bump LibAddonMenu to 40
 

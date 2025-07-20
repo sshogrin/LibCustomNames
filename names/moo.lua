@@ -57,6 +57,7 @@ n["@Regenbogenman"] = {"Regen", "|cfeea57R|r|cfeea4fe|r|cffea48g|r|cffea40e|r|cf
 n["@Drachilo"] = {"Drachilo", "|c20e5d4D|r|c40cbb6r|r|c60b097a|r|c809679c|r|c9f7c5bh|r|cbf623di|r|cdf471el|r|cff2d00o|r"}
 n["@Ermsi"] = {"Ermsi", "|cc9f9c6E|r|c9cf397r|r|c6eed68m|r|c41e739s|r|c14e10ai|r"}
 n["@NovaPixel"] = {"Nova", "|cdda140N|r|cbb6b80o|r|c9936bfv|r|c7700ffa|r"}
+n["@Dolgubon"] = {"Dolgubon", "|cDABD01Dolgubon|r"}
 n["@Magiermaedchen"] = n["@Magiermädchen"]
 n["@schm00nel"] = n["@m00nyONE"]
 n["@C.arley"] = n["@seadotarley"]
