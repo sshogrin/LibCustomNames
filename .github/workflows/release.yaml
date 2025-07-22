@@ -51,13 +51,8 @@ jobs:
           
           echo "should_release=false" >> $GITHUB_OUTPUT
 
-      - name: Cancel if no changes found
-        if: steps.check_changes.outputs.should_release == 'false'
-        run: |
-          echo "🛑 Skipping release because no relevant changes were found."
-          exit 0
-
       - name: Get current year, month and day
+        if: steps.check_changes.outputs.should_release == 'true'
         run: |
           echo "BUILD_DATE_YEAR=$(date -u +'%Y')" >> $GITHUB_ENV
           echo "BUILD_DATE_MONTH=$(date -u +'%m')" >> $GITHUB_ENV
@@ -67,6 +62,7 @@ jobs:
           echo "BUILD_DATE_WITH_HYPHEN=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
       - name: Create env variables
+        if: steps.check_changes.outputs.should_release == 'true'
         run: |
           addon_name="LibCustomNames"
           version="${{ env.BUILD_DATE_WITH_HYPHEN }}"
@@ -77,12 +73,14 @@ jobs:
           echo "ZIP_FULL_NAME=${addon_name}-${version}.zip" >> $GITHUB_ENV
 
       - name: Replace placeholders with current date
+        if: steps.check_changes.outputs.should_release == 'true'
         run: |
           sed -i "s/version = \"dev\"/version = \"${{ env.ADDON_VERSION }}\"/g" ${{ env.ADDON_NAME }}.lua
           sed -i "s/## Version: dev/## Version: ${{ env.ADDON_VERSION }}/g" ${{ env.ADDON_NAME }}.addon
           sed -i "s/## AddOnVersion: 99999999/## AddOnVersion: ${{ env.BUILD_DATE_NUMBER }}/g" ${{ env.ADDON_NAME }}.addon
 
       - name: Create ZIP archive
+        if: steps.check_changes.outputs.should_release == 'true'
         run: |
           REPO_FOLDER=$(pwd)
           TMP_FOLDER="/tmp/${{ env.ADDON_NAME }}"
@@ -101,11 +99,13 @@ jobs:
           (cd /tmp && zip -r --quiet "$REPO_FOLDER/${{ env.ZIP_FULL_NAME }}" "${{ env.ADDON_NAME }}")
 
       - name: Extract latest changelog entry
+        if: steps.check_changes.outputs.should_release == 'true'
         run: |
           awk '/^## / { if (!found) { found=1; print; next } else { exit } } found' CHANGELOG.md > latest_changes.md
           cat latest_changes.md
 #
 #      - name: Create GitHub Release
+#        if: steps.check_changes.outputs.should_release == 'true'
 #        uses: ncipollo/release-action@v1
 #        with:
 #          name: "${{ env.ADDON_VERSION }}"
@@ -119,6 +119,7 @@ jobs:
 #
 #      - name: Test Upload to ESOUI
 #        uses: m00nyONE/esoui-upload@v2
+#        if: steps.check_changes.outputs.should_release == 'true'
 #        with:
 #          api_key: ${{ secrets.ESOUI_API_KEY }}
 #          addon_id: '4155'
@@ -129,6 +130,7 @@ jobs:
 #
 #      - name: Upload to ESOUI
 #        uses: m00nyONE/esoui-upload@v2
+#        if: steps.check_changes.outputs.should_release == 'true'
 #        with:
 #          api_key: ${{ secrets.ESOUI_API_KEY }}
 #          addon_id: '4155'
