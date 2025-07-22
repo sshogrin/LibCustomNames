@@ -1,4 +1,5 @@
 ## 2025.07.22
+- Addon now automatically releases every sunday if there are changes in the files
 - add include-check, duplication-check and color-formatting-check tests to the github pipelines
 - adjust a LOT of malformed names
 - remove duplicates acros files
