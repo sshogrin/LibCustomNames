@@ -1,12 +1,9 @@
-name: ESOUI Release
+name: Scheduled ESOUI Release
 
 on:
-#  schedule:
-#  # every sunday at 04:15am
-#    - cron: "15 4 * * 1"
-  push:
-    branches:
-      - main
+  schedule:
+  # every sunday at 04:15am
+    - cron: "15 4 * * 1"
 
 jobs:
   test:
@@ -101,30 +98,30 @@ jobs:
         run: |
           awk '/^## / { if (!found) { found=1; print; next } else { exit } } found' CHANGELOG.md > latest_changes.md
           cat latest_changes.md
-#
-#      - name: Create GitHub Release
-#        if: steps.check_changes.outputs.should_release == 'true'
-#        uses: ncipollo/release-action@v1
-#        with:
-#          name: "${{ env.ADDON_VERSION }}"
-#          commit: ${{ github.ref }}
-#          tag: "${{ env.ADDON_VERSION }}"
-#          artifacts: "${{ env.ZIP_FULL_NAME }}"
-#          artifactContentType: application/zip
-#          bodyFile: latest_changes.md
-#          allowUpdates: true
-#          makeLatest: true
-#
-#      - name: Test Upload to ESOUI
-#        uses: m00nyONE/esoui-upload@v2
-#        if: steps.check_changes.outputs.should_release == 'true'
-#        with:
-#          api_key: ${{ secrets.ESOUI_API_KEY }}
-#          addon_id: '4155'
-#          version: ${{ env.ADDON_VERSION }}
-#          zip_file: ${{ env.ZIP_FULL_NAME }}
-#          changelog_file: 'CHANGELOG.md'
-#          test: true
+
+      - name: Create GitHub Release
+        if: steps.check_changes.outputs.should_release == 'true'
+        uses: ncipollo/release-action@v1
+        with:
+          name: "${{ env.ADDON_VERSION }}"
+          commit: ${{ github.ref }}
+          tag: "${{ env.ADDON_VERSION }}"
+          artifacts: "${{ env.ZIP_FULL_NAME }}"
+          artifactContentType: application/zip
+          bodyFile: latest_changes.md
+          allowUpdates: true
+          makeLatest: true
+
+      - name: Test Upload to ESOUI
+        uses: m00nyONE/esoui-upload@v2
+        if: steps.check_changes.outputs.should_release == 'true'
+        with:
+          api_key: ${{ secrets.ESOUI_API_KEY }}
+          addon_id: '4155'
+          version: ${{ env.ADDON_VERSION }}
+          zip_file: ${{ env.ZIP_FULL_NAME }}
+          changelog_file: 'CHANGELOG.md'
+          test: true
 #
 #      - name: Upload to ESOUI
 #        uses: m00nyONE/esoui-upload@v2
