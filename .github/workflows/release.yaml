@@ -34,9 +34,9 @@ jobs:
           fi
       
           echo "Last release tag: $LAST_RELEASE_TAG"
-          echo ""
           
-          CHANGED=$(git fetch --tags && git diff --name-only "$LAST_RELEASE_TAG"..HEAD | grep -E '\.(lua|txt|md|xml|addon)$' || true)
+          git fetch --tags
+          CHANGED=$(git diff --name-only "$LAST_RELEASE_TAG"..HEAD | grep -E '\.(lua|txt|md|xml|addon)$' || true)
           echo "$CHANGED"
 #
 #
