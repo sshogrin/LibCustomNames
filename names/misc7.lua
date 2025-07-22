@@ -170,6 +170,7 @@ n["@sagitta14"] = {"sagitta14", "|cfaaabes|r|cf7a0b7a|r|cf497afg|r|cf18da8i|r|ce
 n["@LianYi2044"] = {"涟漪", "|c75a9ff涟|r|ca1efff漪|r"}
 n["@Zard_9527"] = {"Zard", "|cbf5a04Z|r|c809108a|r|c40c80cr|r|c00ff10d|r"}
 n["@prismaticsgg"] = {"PrismaticsGG", "|cffe626Prismatics|r|c1735ffG|r|c1735ffG|"}
+n["@WashedNotSloshed"] = {"Washed", "|cfefce8W|r|cfef9d1a|r|cfff6bas|r|cfff2a2h|r|cffef8be|r|cffec74d|r"}
 n["@braiso_24"] = {"braiso", "|c32ece3b|r|c32dae4r|r|c31c7e6a|r|c31b4e7i|r|c31a2e8s|r|c318fe9o|r|c307ceb_|r|c306aec2|r|c3057ed4|r"}
 n["@ShIsanSAkura"] = {"十三", "|c75be8b十|r|c7dbf74三|r"}
 n["@Thorheit-Teutonia"] = {"Thorheit", "|cdf4720T|r|cbf5b40h|r|c9f7060o|r|c808480r|r|c60999fh|r|c40adbfe|r|c20c2dfi|r|c00d6fft|r"}
