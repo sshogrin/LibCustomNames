@@ -25,7 +25,7 @@ jobs:
         run: |
           echo "🔍 Checking for changes since the last release..."
           REPO="$GITHUB_REPOSITORY"
-          LAST_RELEASE_TAG=$($(gh api repos/${GITHUB_REPOSITORY}/releases/latest --jq .tag_name || echo "")
+          LAST_RELEASE_TAG=$(gh api repos/${GITHUB_REPOSITORY}/releases/latest --jq .tag_name || echo "")
           
           if [ -z "$LAST_RELEASE_TAG" ] || [ "$LAST_RELEASE_TAG" = "null" ]; then
             echo "⚠️ No previous release found, proceeding with release."
