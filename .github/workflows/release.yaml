@@ -22,10 +22,12 @@ jobs:
 
       - name: Check for changes since last release
         id: check_changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "🔍 Checking for changes since the last release..."
           REPO="$GITHUB_REPOSITORY"
-          LAST_RELEASE_TAG=$(curl --silent "https://api.github.com/repos/${REPO}/releases/latest" | jq -r .tag_name)
+          LAST_RELEASE_TAG=$(gh api repos/${GITHUB_REPOSITORY}/releases/latest --jq .tag_name || echo "")
           
           if [ -z "$LAST_RELEASE_TAG" ] || [ "$LAST_RELEASE_TAG" = "null" ]; then
             echo "⚠️ No previous release found, proceeding with release."
