@@ -1,3 +1,8 @@
+## 2025.07.22
+- add include-check, duplication-check and color-formatting-check tests to the github pipelines
+- adjust a LOT of malformed names
+- remove duplicates acros files
+
 ## 2025.07.21
 - new contribution from @DIFFx22
 
