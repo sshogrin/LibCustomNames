@@ -177,3 +177,4 @@ n["@Thorheit-Teutonia"] = {"Thorheit", "|cdf4720T|r|cbf5b40h|r|c9f7060o|r|c80848
 n["@Dark_Hydralisk"] = {"Dark_Hydralisk", "|c3dff0dD|r|c4bff0ca|r|c5aff0br|r|c69ff0ak|r|c77ff09_|r|c86ff08H|r|c95ff07y|r|ca3ff06d|r|cb2ff05r|r|cc0ff04a|r|ccfff03l|r|cdeff02i|r|cecff01s|r|cfbff00k|r"}
 n["@NERV1010"] = {"TeaMaster", "|cf3e315T|r|cf4c624e|r|cf6aa32a|r|cf78e40M|r|cf9714fa|r|cfa555ds|r|cfc396bt|r|cfd1c7ae|r|cff0088r|r"}
 n["@Calisto7"] = {"Calisto", "|c7300ffC|r|c6a00ffa|r|c6100ffl|r|c5700ffi|r|c4e00ffs|r|c4500fft|r|c3c00ffo|r"}
+n["@Latinwolverine"] = {"Latinwolverine", "|cff0700L|r|cff0700a|r|cff0700t|r|cff0700i|r|cff0700n|r|cff0700w|r|cff0700o|r|cff0700l|r|cff0700v|r|cff0700e|r|cff0700r|r|cff0700i|r|cff0700n|r|cff0700e|r"}
