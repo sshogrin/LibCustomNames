@@ -42,14 +42,12 @@ jobs:
           
           if [ -z "$CHANGED" ]; then
             echo "✅ No relevant file changes since $LAST_RELEASE_TAG."
-            #echo "should_release=false" >> $GITHUB_OUTPUT
+            echo "should_release=false" >> $GITHUB_OUTPUT
           else
             echo "✅ Changes detected:"
             echo "$CHANGED"
-            #echo "should_release=true" >> $GITHUB_OUTPUT
+            echo "should_release=true" >> $GITHUB_OUTPUT
           fi
-          
-          echo "should_release=false" >> $GITHUB_OUTPUT
 
       - name: Get current year, month and day
         if: steps.check_changes.outputs.should_release == 'true'
