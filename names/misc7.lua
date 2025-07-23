@@ -182,3 +182,4 @@ n["@megggish"] = {"Megggish", "|cff7bd4M|r|cff69d2e|r|cff58d1g|r|cff46cfg|r|cff3
 n["@Bakleeda"] = {"Bakleeda", "|cff66faB|r|ce878fba|r|cd28bfbk|r|cbb9dfcl|r|ca5b0fde|r|c8ec2fee|r|c78d5fed|r|c61e7ffa|r"}
 n["@GENRAL-LAGGZ"] = {"LAGGZ", "|c8000ffL|r|c9116ffA|r|ca22cffG|r|cb342feG|r|cc458feZ|r"}
 n["@ewilliam"] = {"Ewilliam", "|c00fffdEwilliam|r"}
+n["@Sirchipalot"] = {"Chip", "|cc940ffC|r|cdb80ffh|r|cedbfffi|r|cffffffp|r"}
