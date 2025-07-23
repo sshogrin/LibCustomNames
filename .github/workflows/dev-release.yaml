@@ -1,9 +1,6 @@
 name: Dev Release
 
 on:
-  #schedule:
-  # every saturday at 05:07am
-  #  - cron: "7 5 * * 0"
   push:
     branches:
       - main
