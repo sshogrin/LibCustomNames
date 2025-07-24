@@ -19,3 +19,4 @@ n["@Nyo-Rdn"] = {"Nyo", "|c4168f0N|r|c8234e1y|r|cc300d2o|r"}
 n["@Chelgoumy"] = {"Chelgoumy", "|cff2101Che|r|c000000lg|r|cFFFFFFou|r|c58FF0Amy|r"}
 n["@KOZYMEISTER"] = {"Kozy", "|c8f00bfK|r|c5f0080o|r|c300040z|r|c000000y|r"}
 n["@DustyCharm"] = {"DustyCharm", "|c50a9ffD|r|c63b2ffu|r|c75bcffs|r|c88c5fft|r|c9aceffy|r|cacd7ffC|r|cbfe0ffh|r|cd1eaffa|r|ce4f3ffr|r|cf6fcffm|r"}
+n["@Stylish"] = {"Stylish", "|c1bdbf1S|r|c37b6f4t|r|c5292f6y|r|c6d6df8l|r|c8849fai|r|ca424fds|r|cbf00ffh|r"}
