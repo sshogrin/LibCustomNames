@@ -182,4 +182,6 @@ n["@megggish"] = {"Megggish", "|cff7bd4M|r|cff69d2e|r|cff58d1g|r|cff46cfg|r|cff3
 n["@Bakleeda"] = {"Bakleeda", "|cff66faB|r|ce878fba|r|cd28bfbk|r|cbb9dfcl|r|ca5b0fde|r|c8ec2fee|r|c78d5fed|r|c61e7ffa|r"}
 n["@GENRAL-LAGGZ"] = {"LAGGZ", "|c8000ffL|r|c9116ffA|r|ca22cffG|r|cb342feG|r|cc458feZ|r"}
 n["@ewilliam"] = {"Ewilliam", "|c00fffdEwilliam|r"}
+n["@Pocket3591"] = {"Pocket", "|c2b69d5P|r|c5587aao|r|c80a580c|r|caac255k|r|cd4e02be|r|cfffe00t|r"}
 n["@Sirchipalot"] = {"Chip", "|cc940ffC|r|cdb80ffh|r|cedbfffi|r|cffffffp|r"}
+n["@Chay'Kashet"] = {"Chay'Kashet", "|cffe4d9C|r|cffd9c5h|r|cffcfb2a|r|cffc49ey|r|cffb98a'|r|cffae76K|r|cffa362a|r|cff984es|r|cff8e3bh|r|cff8327e|r|cff7813t|r"}
