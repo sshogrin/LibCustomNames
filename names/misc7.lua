@@ -185,3 +185,4 @@ n["@ewilliam"] = {"Ewilliam", "|c00fffdEwilliam|r"}
 n["@Pocket3591"] = {"Pocket", "|c2b69d5P|r|c5587aao|r|c80a580c|r|caac255k|r|cd4e02be|r|cfffe00t|r"}
 n["@Sirchipalot"] = {"Chip", "|cc940ffC|r|cdb80ffh|r|cedbfffi|r|cffffffp|r"}
 n["@Chay'Kashet"] = {"Chay'Kashet", "|cffe4d9C|r|cffd9c5h|r|cffcfb2a|r|cffc49ey|r|cffb98a'|r|cffae76K|r|cffa362a|r|cff984es|r|cff8e3bh|r|cff8327e|r|cff7813t|r"}
+n["@InsaneShad0w92"] = {"Shad0w92", "|c6f32ecS|r|c8339d8h|r|c983fc5a|r|cad46b2d|r|cc14c9e0|r|cd6528bw|r|cea59779|r|cff5f642|r"}
