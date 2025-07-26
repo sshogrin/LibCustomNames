@@ -16,6 +16,20 @@ local EM = EVENT_MANAGER
 --- @type table<string, string[]> Table mapping `@accountName` to `{ uncoloredName, coloredName }`
 local names = {}
 
+--- Returns a read-only proxy table
+local function readOnly(t)
+    local proxy = {}
+    local metatable = {
+        --__metatable = "no indexing allowed",
+        __index = t,
+        __newindex = function(_, k, v)
+            d("attempt to update read-only table")
+        end,
+    }
+    setmetatable(proxy, metatable)
+    return proxy
+end
+
 --- Returns a reference to the internal names table.
 --- This is only available during addon initialization, to disallow other addons tampering with the data later.
 --- @return table<string, string[]> The table of custom names.
@@ -32,6 +46,9 @@ local function initialize()
     end
 
     lib.BuildMenu()
+
+    -- make the Lib read-only
+    _G[lib_name] = readOnly(lib)
 end
 
 --- Register for the EVENT_ADD_ON_LOADED event to initialize the addon properly.
