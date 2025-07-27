@@ -199,6 +199,7 @@ local function getOptions()
     }
 end
 
+--- generates the menu for the lIbrary with LibAddonMenu2.0
 function lib.BuildMenu()
     sv = ZO_SavedVars:NewAccountWide(lib_name .. "SV", svVersion, nil, svDefaults)
 
@@ -208,5 +209,6 @@ function lib.BuildMenu()
     LAM:RegisterAddonPanel(lib_name .. "Menu", panel)
     LAM:RegisterOptionControls(lib_name .. "Menu", options)
 
+    -- set's itself nil to avoid getting called again
     lib.BuildMenu = nil
 end

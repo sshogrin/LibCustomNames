@@ -1,4 +1,5 @@
---- general initialization
+---@diagnostic disable: undefined-global
+--- @class LibCustomNames
 local lib = {
     name = "LibCustomNames",
     version = "dev",
@@ -13,7 +14,11 @@ _G[lib_name] = lib
 
 local EM = EVENT_MANAGER
 
---- @type table<string, string[]> Table mapping `@accountName` to `{ uncoloredName, coloredName }`
+--- @class nameEntries
+--- @field name string
+--- @field coloredName string
+
+--- @type table<string, nameEntries> Table mapping `@accountName` to `{ uncoloredName, coloredName }`
 local names = {}
 
 --- Returns a read-only proxy table
@@ -32,7 +37,7 @@ end
 
 --- Returns a reference to the internal names table.
 --- This is only available during addon initialization, to disallow other addons tampering with the data later.
---- @return table<string, string[]> The table of custom names.
+--- @return table<string, nameEntries> The table of custom names.
 function lib.GetNamesTable()
     return names
 end
