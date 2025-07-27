@@ -1,4 +1,3 @@
----@diagnostic disable: undefined-global
 --- @class LibCustomNames
 local lib = {
     name = "LibCustomNames",
