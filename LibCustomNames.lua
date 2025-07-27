@@ -14,11 +14,11 @@ _G[lib_name] = lib
 
 local EM = EVENT_MANAGER
 
---- @class nameEntries
+--- @class nameEntry
 --- @field name string
 --- @field coloredName string
 
---- @type table<string, nameEntries> Table mapping `@accountName` to `{ uncoloredName, coloredName }`
+--- @type table<string, nameEntry> Table mapping `@accountName` to `{ uncoloredName, coloredName }`
 local names = {}
 
 --- Returns a read-only proxy table
@@ -37,7 +37,7 @@ end
 
 --- Returns a reference to the internal names table.
 --- This is only available during addon initialization, to disallow other addons tampering with the data later.
---- @return table<string, nameEntries> The table of custom names.
+--- @return table<string, nameEntry> The table of custom names.
 function lib.GetNamesTable()
     return names
 end

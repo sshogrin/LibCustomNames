@@ -63,7 +63,7 @@ end
 --- Retrieves all custom names from the internal table as a deep copy.
 --- Editing the returning table has no effect to the internal one that is used to retrieve actual names.
 ---
---- @return table<string, nameEntries>
+--- @return table<string, nameEntry>
 function lib.GetAllNames()
     return clone(n)
 end
