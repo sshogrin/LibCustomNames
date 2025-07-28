@@ -189,3 +189,4 @@ n["@InsaneShad0w92"] = {"Shad0w92", "|c6f32ecS|r|c8339d8h|r|c983fc5a|r|cad46b2d|
 n["@CRaull"] = {"CRaull", "|cffffffCRaull|r"}
 n["@Manitaropitas"] = {"Mani", "|cbd00ffMani|r"}
 n["@kiyothewanderer"] = {"KIYO", "|cfb8c94K|r|cfaf366I|r|c5eccdaY|r|cc289faO|r"}
+n["@IgnisCore"] = {"IgnisCore", "|c1cc50cI|r|c39c917g|r|c55cd22n|r|c71d12di|r|c8ed437s|r|caad842C|r|cc6dc4do|r|ce3e058r|r|cffe463e|r"}
