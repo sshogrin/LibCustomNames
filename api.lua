@@ -2,7 +2,7 @@ local lib_name = "LibCustomNames"
 local lib = _G[lib_name]
 local n = lib.GetNamesTable()
 
--- internal function that created a deep copy of a table
+--- function that creates a deep copy of a table
 local function clone(t)
     local copy = {}
     for k, v in pairs(t) do
@@ -44,6 +44,26 @@ function lib.Get(username, colored)
     end
 end
 
+--- Retrieves the colored custom name for a given username.
+---
+--- @param username string The player's account name (e.g., "@m00nyONE").
+--- @return string|nil customName The custom name if it exists, or `nil` otherwise.
+function lib.GetColoredName(username)
+    return lib.Get(username, true)
+end
+
+--- Retrieves the uncolored custom name for a given username.
+---
+--- @param username string The player's account name (e.g., "@m00nyONE").
+--- @return string|nil customName The custom name if it exists, or `nil` otherwise.
+function lib.GetUncoloredName(username)
+    return lib.Get(username, false)
+end
+
+--- Retrieves all custom names from the internal table as a deep copy.
+--- Editing the returning table has no effect to the internal one that is used to retrieve actual names.
+---
+--- @return table<string, nameEntry>
 function lib.GetAllNames()
     return clone(n)
 end
