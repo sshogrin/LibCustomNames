@@ -188,4 +188,6 @@ n["@Chay'Kashet"] = {"Chay'Kashet", "|cffe4d9C|r|cffd9c5h|r|cffcfb2a|r|cffc49ey|
 n["@InsaneShad0w92"] = {"Shad0w92", "|c6f32ecS|r|c8339d8h|r|c983fc5a|r|cad46b2d|r|cc14c9e0|r|cd6528bw|r|cea59779|r|cff5f642|r"}
 n["@CRaull"] = {"CRaull", "|cffffffCRaull|r"}
 n["@Manitaropitas"] = {"Mani", "|cbd00ffMani|r"}
+n["@MaceWinduwu"] = {"[Mace] W.", "|ceeca2a[|r|ceeca2aM|r|ceeca2aa|r|ceeca2ac|r|ceeca2ae|r|ceeca2a]|r |c7f3effW|r|c7f3eff.|r"}
+n["@RadienESO"] = {"Strix", "|c0069a8S|r|cfecc00t|r|cfecc00r|r|c0069a8i|r|c0069a8x|r"}
 n["@kiyothewanderer"] = {"KIYO", "|cfb8c94K|r|cfaf366I|r|c5eccdaY|r|cc289faO|r"}
