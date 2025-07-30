@@ -1,3 +1,4 @@
+--[[ doc.lua begin ]]
 --- @class LibCustomNames
 local lib = {
     name = "LibCustomNames",
@@ -13,12 +14,9 @@ _G[lib_name] = lib
 
 local EM = EVENT_MANAGER
 
---- @class nameEntry
---- @field name string
---- @field coloredName string
-
---- @type table<string, nameEntry> Table mapping `@accountName` to `{ uncoloredName, coloredName }`
+--- @type table<string, string[]> Table mapping `@accountName` to `{ uncoloredName, coloredName }`
 local names = {}
+--[[ doc.lua end ]]
 
 --- Returns a read-only proxy table
 local function readOnly(t)
@@ -36,7 +34,7 @@ end
 
 --- Returns a reference to the internal names table.
 --- This is only available during addon initialization, to disallow other addons tampering with the data later.
---- @return table<string, nameEntry> The table of custom names.
+--- @return table<string, string[]> The table of custom names.
 function lib.GetNamesTable()
     return names
 end

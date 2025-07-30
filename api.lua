@@ -11,6 +11,8 @@ local function clone(t)
     return copy
 end
 
+--[[ doc.lua begin ]]
+
 --- Checks whether a custom name exists for the given username.
 --- @param username string The player's account name (e.g., "@m00nyONE").
 --- @return boolean hasCustomName `true` if a custom name exists, `false` otherwise.
@@ -66,7 +68,7 @@ local cachedTableClone = nil
 --- Retrieves all custom names from the internal table as a deep copy.
 --- Editing the returning table has no effect to the internal one that is used to retrieve actual names.
 ---
---- @return table<string, nameEntry>
+--- @return table<string, string[]>
 function lib.GetAll()
     if not cachedTableClone then
         cachedTableClone = clone(n)
@@ -88,3 +90,5 @@ function lib.GetCustomNameCount()
     end
     return cachedNamesCount
 end
+
+--[[ doc.lua end ]]
