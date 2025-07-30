@@ -42,8 +42,8 @@ def generate_main_file(lua_files, addon_root, output_file):
         if os.path.isfile(full_path):
             blocks = extract_doc_blocks(full_path)
             if blocks:
-                rel_display = os.path.relpath(full_path, addon_root)
-                all_blocks.append(f"-- From: {rel_display}")
+                # rel_display = os.path.relpath(full_path, addon_root)
+                # all_blocks.append(f"-- From: {rel_display}")
                 all_blocks.extend(blocks)
                 all_blocks.append("")  # for spacing
         else:
