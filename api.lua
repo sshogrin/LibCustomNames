@@ -60,6 +60,8 @@ function lib.GetUncolored(username)
     return lib.Get(username, false)
 end
 
+-- cached Names table
+local cachedTableClone = nil
 
 --- Retrieves all custom names from the internal table as a deep copy.
 --- Editing the returning table has no effect to the internal one that is used to retrieve actual names.
