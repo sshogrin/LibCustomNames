@@ -34,6 +34,8 @@ This helps support development and keeps the ESO addon ecosystem fun and alive!
 
 If you're an addon developer and want to use [b]LibCustomNames[/b]:
 
+Have a look at the full documentation here: [URL="https://m00nyone.github.io/LibCustomNames/"]Github Pages[/URL]
+
 [code]
 local name = LibCustomNames:Get("@originalAccountName") or "@originalAccountName"
 [/code]
