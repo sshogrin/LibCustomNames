@@ -60,8 +60,6 @@ function lib.GetUncolored(username)
     return lib.Get(username, false)
 end
 
--- cached Clone of the internal table for the GetAll() function. As this table should always be readOnly and does nothing if edited, there is no need for it to be cloned each time it's requested
-local cachedTableClone = nil
 
 --- Retrieves all custom names from the internal table as a deep copy.
 --- Editing the returning table has no effect to the internal one that is used to retrieve actual names.
