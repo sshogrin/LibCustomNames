@@ -3,7 +3,6 @@ on:
   workflow_call:
 jobs:
   docs:
-    if: github.repository_owner == 'm00nyONE'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
