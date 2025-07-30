@@ -60,30 +60,31 @@ function lib.GetUncolored(username)
     return lib.Get(username, false)
 end
 
+-- cached Clone of the internal table for the GetAll() function. As this table should always be readOnly and does nothing if edited, there is no need for it to be cloned each time it's requested
+local cachedTableClone = nil
+
 --- Retrieves all custom names from the internal table as a deep copy.
 --- Editing the returning table has no effect to the internal one that is used to retrieve actual names.
 ---
 --- @return table<string, nameEntry>
 function lib.GetAll()
-    return clone(n)
+    if not cachedTableClone then
+        cachedTableClone = clone(n)
+    end
+    return cachedTableClone
 end
 
---[[
-    Names count caching:
-    The number of custom name entries is fixed at runtime (names are registered once and not modified later).
-    To optimize performance, counts are calculated only once when first requested and then cached for future calls.
-]]
-
-local namesCount = 0
+-- The number of custom name entries is fixed at runtime (names are registered once and not modified later). To optimize performance, counts are calculated only once when first requested and then cached for future calls.
+local cachedNamesCount = 0
 
 --- Returns the number of registered custom names.
 --- The result is cached after the first computation.
 --- @return number count The number of custom names
 function lib.GetCustomNameCount()
-    if namesCount == 0 then
+    if cachedNamesCount == 0 then
         for _ in pairs(n) do
-            namesCount = namesCount + 1
+            cachedNamesCount = cachedNamesCount + 1
         end
     end
-    return namesCount
+    return cachedNamesCount
 end
