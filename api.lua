@@ -48,7 +48,7 @@ end
 ---
 --- @param username string The player's account name (e.g., "@m00nyONE").
 --- @return string|nil customName The custom name if it exists, or `nil` otherwise.
-function lib.GetColoredName(username)
+function lib.GetColored(username)
     return lib.Get(username, true)
 end
 
@@ -56,7 +56,7 @@ end
 ---
 --- @param username string The player's account name (e.g., "@m00nyONE").
 --- @return string|nil customName The custom name if it exists, or `nil` otherwise.
-function lib.GetUncoloredName(username)
+function lib.GetUncolored(username)
     return lib.Get(username, false)
 end
 
@@ -64,6 +64,26 @@ end
 --- Editing the returning table has no effect to the internal one that is used to retrieve actual names.
 ---
 --- @return table<string, nameEntry>
-function lib.GetAllNames()
+function lib.GetAll()
     return clone(n)
+end
+
+--[[
+    Names count caching:
+    The number of custom name entries is fixed at runtime (names are registered once and not modified later).
+    To optimize performance, counts are calculated only once when first requested and then cached for future calls.
+]]
+
+local namesCount = 0
+
+--- Returns the number of registered custom names.
+--- The result is cached after the first computation.
+--- @return number count The number of custom names
+function lib.GetCustomNameCount()
+    if namesCount == 0 then
+        for _ in pairs(n) do
+            namesCount = namesCount + 1
+        end
+    end
+    return namesCount
 end
