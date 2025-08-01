@@ -194,3 +194,4 @@ n["@kiyothewanderer"] = {"KIYO", "|cfb8c94K|r|cfaf366I|r|c5eccdaY|r|cc289faO|r"}
 n["@IgnisCore"] = {"IgnisCore", "|c1cc50cI|r|c39c917g|r|c55cd22n|r|c71d12di|r|c8ed437s|r|caad842C|r|cc6dc4do|r|ce3e058r|r|cffe463e|r"}
 n["@KendrasKenpachi"] = {"Kendras", "|c960000Kendras|r"}
 n["@Minasgorth"] = {"Minas", "|ce4e4e4M|r|cc8c8c8i|r|cadadadn|r|c919191a|r|c767676s|r"}
+n["@WildCatra"] = {"WildCatra", "|ccb0e00W|r|cce1c00i|r|cd22a00l|r|cd53800d|r|cd94600C|r|cdc5400a|r|ce06200t|r|ce37000r|r|ce77e00a|r"}
