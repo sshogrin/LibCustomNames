@@ -20,3 +20,7 @@ n["@Chelgoumy"] = {"Chelgoumy", "|cff2101Che|r|c000000lg|r|cFFFFFFou|r|c58FF0Amy
 n["@KOZYMEISTER"] = {"Kozy", "|c8f00bfK|r|c5f0080o|r|c300040z|r|c000000y|r"}
 n["@DustyCharm"] = {"DustyCharm", "|c50a9ffD|r|c63b2ffu|r|c75bcffs|r|c88c5fft|r|c9aceffy|r|cacd7ffC|r|cbfe0ffh|r|cd1eaffa|r|ce4f3ffr|r|cf6fcffm|r"}
 n["@Stylish"] = {"Stylish", "|c1bdbf1S|r|c37b6f4t|r|c5292f6y|r|c6d6df8l|r|c8849fai|r|ca424fds|r|cbf00ffh|r"}
+n["@Nheixx"] = {"Dur(n)ex", "|c1470f6D|r|c2878ecu|r|c3c80e3r|r|c5088d9(|r|c648fd0n|r|c7897c6)|r|c8c9fbde|r|ca0a7b3x|r"}
+n["@JRM-MORT"] = {"JRM", "|cbfcd5cJ|r|c80b9aeR|r|c40a4ffM|r"}
+n["@Fondianist"] = {"L'aveugle", "|cffffffL'aveugle|r"}
+n["@Kinseht"]= {"AnalKin'g", "|cee0594A|r|cdc0a81n|r|ccb106fa|r|cb9155cl|r|ca81a4aK|r|c961f37i|r|c852525n|r|c732a12'|r|c622f00g|r"}
