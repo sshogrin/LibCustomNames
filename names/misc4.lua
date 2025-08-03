@@ -304,7 +304,6 @@ n["@donanoca"] = {"donanoca", "|cff86e2donanoca|r"}
 n["@AvantoMusic"] = {"AvantoMusic", "|c8c17ffA|r|c7e2effv|r|c7046ffa|r|c625dffn|r|c5474fft|r|c468bfeo|r|c38a2feM|r|c2ab9feu|r|c1cd1fes|r|c0ee8fei|r|c00fffec|r"}
 n["@Dromgrin"] = {"Dromgrin", "|cff2e1cD|r|cff4323r|r|cff572bo|r|cff6c32m|r|cff803ag|r|cff9441r|r|cffa949i|r|cffbd50n|r"}
 n["@IvySparrow"] = {"IvySparrow", "|c810cffI|r|c7a0fffv|r|c7212ffy|r|c6b15ffS|r|c6418ffp|r|c5d1affa|r|c561dffr|r|c4e20ffr|r|c4723ffo|r|c4026ffw|r"}
-n["@sshogrin"] = {"sshogrin", "|c2046e5s|r|c403cccs|r|c6032b2h|r|c802898o|r|c9f1e7eg|r|cbf1465r|r|cdf0a4bi|r|cff0031n|r"}
 n["@Aashiana"] = {"Aashiana", "|c5882ffAashiana|r"}
 n["@RedMacil"] = {"RedMacil", "|cff0000Red|r|c3196ffMacil|r"}
 n["@ALYSLAYED"] = {"ALYSLAYED", "|cf80eaaA|r|cf21cb4L|r|ceb2bbfY|r|ce539caS|r|cde47d4L|r|cd855dfA|r|cd164eaY|r|ccb72f4E|r|cc480ffD|r"}
