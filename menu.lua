@@ -23,7 +23,7 @@ local function getPanel()
         type = 'panel',
         name = lib_name,
         displayName = lib_name,
-        author = '|c76c3f4@m00nyONE|r',
+        author = strfmt("|c76c3f4%s|r", lib_author),
         version = strfmt('|c00FF00%s|r', lib_version),
         website = 'https://www.esoui.com/downloads/info4155-LibCustomNames.html',
         donation = lib.Donate,
@@ -199,7 +199,7 @@ local function getOptions()
     }
 end
 
---- generates the menu for the lIbrary with LibAddonMenu2.0
+--- generates the menu for the library with LibAddonMenu2.0
 function lib.BuildMenu()
     sv = ZO_SavedVars:NewAccountWide(lib_name .. "SV", svVersion, nil, svDefaults)
 
