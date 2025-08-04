@@ -52,3 +52,4 @@ n["@Kymlee"] = {"Kim", "|c00fffeKim|r"}
 n["@DovakiinFawad"] = {"Doverr", "|cdd10ffD|r|ccb1fffo|r|cb92fffv|r|ca63fffe|r|c944effr|r|c825effr|r"}
 n["@butteredTOA5T"] = {"Buttered Toast", "|cffdb3bButtered Toast|r"}
 n["@SquirrelyWrath"] = {"SquirrelyWrath", "|cee7512S|r|cde7a24q|r|ccd8037u|r|cbc8549i|r|cac8b5br|r|c9b906dr|r|c8b967fe|r|c7a9c92l|r|c69a1a4y|r|c59a7b6W|r|c48acc8r|r|c37b2dba|r|c27b7edt|r|c16bdffh|r"}
+n["@djeRNATC"] = {"Daniel (DJ)", "|c467700D|r|c567f00a|r|c678800n|r|c789000i|r|c899900e|r|c99a100l|r |caaaa00(|r|cbbb200D|r|ccbbb00J|r|cdcc300)|r"}
